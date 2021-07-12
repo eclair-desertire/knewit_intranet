@@ -12,4 +12,15 @@ class Video(models.Model):
 
     def __str__(self):
         return self.name
+
+class Course(models.Model):
+    course_name=models.CharField('Название курса',max_length=200)
+    price=models.IntegerField('Цена курса')
+    videos=models.ForeignKey(Video, on_delete=models.CASCADE)
+    
+    def publish(self):
+        self.save()
+
+    def __str__(self):
+        return self.name
 # Create your models here.
