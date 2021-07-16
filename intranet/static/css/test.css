@@ -1,0 +1,37 @@
+*{
+    display: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+}
+.page{
+    display: flex;
+    justify-content: space-between;
+}
+.left_part{
+    width: 300px;
+    height: 1080px;
+    background-color: blueviolet;
+}
+.right_part{
+    width: 1600px;
+    height: 1080px;
+    background-color: red;
+}
+.vid_player{
+    margin-left: 150px;
+}
+.logo_menu{
+    margin-left: 100px;
+}
+.avatar{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.mat_down{
+    text-decoration: none;
+    color: white;
+    
+}

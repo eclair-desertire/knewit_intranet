@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST VIDEO</title>
+    <link rel="stylesheet" href="{% static 'css/test.css' %}">
+</head>
+<body>
+    <div class="page">
+        <div class="left_part">
+            <div class="logo_menu">
+                <h1>MENU</h1>
+            </div>
+
+            <div class="avatar">
+                <img src="{% static 'img/avatar.png' %}">
+                <h2>NAME SURNAME</h2>
+            </div>
+        </div>
+        <div class="right_part">
+            {% for vid in video %}
+                <video width='640' height='480' class="vid_player" controls controls controlsList="nodownload" src="{{vid.get_video_url}}">
+                  
+                </video>
+                <a href="{{vid.get_mat_url}}" class="mat_down">Скачать материалы к уроку</a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
